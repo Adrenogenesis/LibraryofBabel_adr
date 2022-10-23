@@ -1,0 +1,249 @@
+:root {
+  --colour-bg: floralwhite;
+  --colour-fg: #111;
+  --colour-grey: #545454;
+  --colour-light-grey: #888;
+  --colour-border: #ddd;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 738px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--colour-bg);
+  color: var(--colour-fg);
+  font-family: "Lora", serif;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+a {
+  color: var(--colour-fg);
+  font-weight: bold;
+}
+
+a[target="_blank"]::after {
+  content: "";
+  display: inline-block;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:currentColor;"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>');
+  width: 14px;
+  height: 14px;
+  transform: rotate(-45deg);
+  vertical-align: top;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+nav h1 {
+  font-size: 14px;
+}
+
+nav .Links {
+  display: flex;
+  align-items: center;
+}
+
+nav .Links a {
+  display: inline-block;
+}
+
+nav .Links > * + * {
+  margin-left: 10px;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid var(--colour-border);
+}
+
+footer p,
+footer a {
+  color: var(--colour-grey);
+}
+
+.BodyStyle > * + * {
+  margin-top: 15px;
+}
+
+.BodyStyle h2,
+.BodyStyle h3,
+.BodyStyle h4,
+.BodyStyle h5 {
+  font-size: 14px;
+}
+
+.BodyStyle ul,
+.BodyStyle ol {
+  padding-left: 18px;
+}
+
+.PageInfo {
+  margin-bottom: 20px;
+}
+
+.PageInfo pre {
+  white-space: break-spaces;
+}
+
+.PageInfo details {
+  margin-top: 10px;
+}
+
+.PageInfo details p {
+  font-family: "Source Code Pro", monospace;
+  word-break: break-all;
+  user-select: all;
+  border: 1px solid var(--colour-border);
+  border-radius: 2px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.PageContentWrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.PageContent {
+  display: grid;
+  grid-template-columns: 26px 672px;
+}
+
+.PageContent .Lines {
+  color: var(--colour-light-grey);
+  user-select: none;
+  display: inline-block;
+  position: sticky;
+  left: 0;
+  background-color: var(--colour-bg);
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.PageContent pre {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.PageContent strong {
+  background-color: yellow;
+}
+
+.PageNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.PageNavigation .PageSelector {
+  display: flex;
+  align-items: center;
+}
+
+.PageNavigation .PageSelector select {
+  background-color: var(--colour-bg);
+  margin-left: 5px;
+  font-family: "Source Code Pro", monospace;
+}
+
+.SearchForm textarea, .BrowseForm textarea {
+  appearance: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.SearchForm .ModeSelection {
+  margin-bottom: 10px;
+}
+
+.SearchForm .ModeSelection label {
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.SearchForm .ModeSelection input {
+  margin-right: 5px;
+}
+
+.SearchForm button, .BrowseForm button {
+  appearance: none;
+  width: 100%;
+  padding: 10px;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background-color: antiquewhite;
+  color: var(--colour-fg);
+  cursor: pointer;
+}
+
+.InfoBox {
+  border: 1px solid var(--colour-border);
+  border-radius: 2px;
+  padding: 10px;
+  color: var(--colour-grey);
+  font-size: 13px;
+}
+
+.BrowseForm label > *:last-child {
+  margin-top: 5px;
+}
+
+.BrowseForm label span {
+  color: var(--colour-light-grey);
+}
+
+.BrowseForm .Numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.BrowseForm .Numbers input {
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  border: 1px solid grey;
+  border-radius: 2px;
+}
+
+.super {
+  font-size: 12px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: -2px;
+}
